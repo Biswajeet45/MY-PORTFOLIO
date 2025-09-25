@@ -32,6 +32,7 @@ import gpsLogo from './assets/education_logo/gps.jpeg';
 import schoolLogo from './assets/education_logo/school.jpeg';
 
 // Project Section Logo's
+import qsLogo from './assets/work_logo/qs.png';
 import sepLogo from './assets/work_logo/sep.png';
 import iplLogo from './assets/work_logo/tata-ipl-logo.png';
 import linkedinLogo from './assets/work_logo/LINKEDIN.png';
@@ -157,8 +158,19 @@ export const SkillsInfo = [
   ];
   
   export const projects = [
+
     {
       id: 0,
+      title: "QuickShow",
+      description:
+        "A MERN stack project where users can sign up with Clerk, explore movies, choose seats, and book tickets with multi-session account switching, along with Stripe Payment Integration ",
+      image: qsLogo,
+      tags: ["MongoDB","Express.js","React.js","Node.js"],
+      github: "https://github.com/Biswajeet45/QuickShow",
+      live: "https://quick-show-ak73.vercel.app/",
+    },
+    {
+      id: 1,
       title: "Smart Education Platform",
       description:
         "Designed and developed a multi-platform education platform with Angular as the frontend framework and Firebase as the backend. ",
@@ -168,7 +180,7 @@ export const SkillsInfo = [
       live: "https://edu-nova-sep.vercel.app/",
     },
     {
-      id: 1,
+      id: 2,
       title: "IPL Analysis Dashboard",
       description:
         "Developed an interactive dashboard for analyzing IPL match data using Python (Pandas, Matplotlib) and SQL for data storage and querying.",
@@ -178,7 +190,7 @@ export const SkillsInfo = [
       live: "https://github.com/Biswajeet45/PBI_DASHBOARD/blob/main/IPL_ANALYSIS_2008_2022.pbix",
     },
     {
-      id: 2,
+      id: 3,
       title: "LinkedIn Analysis Dashboard",
       description:
         " Built an analytics dashboard to extract and analyze LinkedIn profile and activity data using Python and SQL.",
