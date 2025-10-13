@@ -20,6 +20,7 @@ import postmanLogo from './assets/tech_logo/postman.png';
 import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
+import springBootLogo from './assets/tech_logo/spring-boot.png'
 
 // Experience Section Logo's
 import cavissonLogo from './assets/company_logo/cavisson.png';
@@ -52,13 +53,14 @@ export const SkillsInfo = [
     ],
   },
   {
-    title: 'Backend',
+    title: 'Backend and DBs',
     skills: [
       { name: 'NodeJS', logo: nodejsLogo },
       { name: 'ExpressJS', logo: expressjsLogo },
       { name: 'MySQL', logo: mysqlLogo },
       { name: 'MongoDB', logo: mongodbLogo },
       { name: 'PSQL', logo: postgreLogo },
+      {name: 'SpringBoot',logo: springBootLogo}
     ],
   },
   {
