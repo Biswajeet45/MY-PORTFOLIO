@@ -39,7 +39,6 @@ const Footer = () => {
         {/* Social Media Icons - Responsive */}
         <div className="flex flex-wrap justify-center space-x-4 mt-6">
           {[
-            { icon: <SiX />, link: "https://x.com/Biswa42" },
             { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/biswajeet-sahu-318419235/" },
             { icon: <FaInstagram />, link: "https://www.instagram.com/_mr_biswajeet/" },
             { icon: <FaYoutube />, link: "https://www.youtube.com/@biswajeetsahu2963" },
@@ -59,7 +58,7 @@ const Footer = () => {
 
         {/* Copyright Text */}
         <p className="text-sm text-gray-400 mt-6">
-          © 2025 Biswajeet Sahu. All rights reserved.
+          © 2026 Biswajeet Sahu. All rights reserved.
         </p>
       </div>
     </footer>
