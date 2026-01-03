@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaYoutube, FaGithub } from "react-icons/fa";
 import { SiX } from "react-icons/si";
 
 const Footer = () => {
@@ -43,6 +43,7 @@ const Footer = () => {
             { icon: <FaInstagram />, link: "https://www.instagram.com/_mr_biswajeet/" },
             { icon: <FaYoutube />, link: "https://www.youtube.com/@biswajeetsahu2963" },
             { icon: <SiX />, link: "https://x.com/Biswa42" },
+            { icon: <FaGithub />, link: "https://github.com/Biswajeet45"},
             
           ].map((item, index) => (
             <a

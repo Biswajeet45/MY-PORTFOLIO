@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { SiX } from "react-icons/si";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,10 +10,7 @@ const Navbar = () => {
 
   // Detect scroll and change navbar background
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -23,9 +21,7 @@ const Navbar = () => {
     setIsOpen(false);
 
     const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
   const menuItems = [
@@ -34,6 +30,15 @@ const Navbar = () => {
     { id: "experience", label: "Experience" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
+  ];
+
+  // Social links
+  const socialLinks = [
+    { icon: <FaGithub />, link: "https://github.com/Biswajeet45" },
+    { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/biswajeet-sahu-318419235/" },
+    { icon: <FaInstagram />, link: "https://www.instagram.com/_mr_biswajeet/" },
+    { icon: <SiX />, link: "https://x.com/Biswa42" },
+    { icon: <FaYoutube />, link: "https://www.youtube.com/@biswajeetsahu2963" },
   ];
 
   return (
@@ -61,31 +66,24 @@ const Navbar = () => {
                 activeSection === item.id ? "text-[#8245ec]" : ""
               }`}
             >
-              <button onClick={() => handleMenuItemClick(item.id)}>
-                {item.label}
-              </button>
+              <button onClick={() => handleMenuItemClick(item.id)}>{item.label}</button>
             </li>
           ))}
         </ul>
 
-        {/* Social Icons */}
+        {/* Desktop Social Icons */}
         <div className="hidden md:flex space-x-4">
-          <a
-            href="https://github.com/Biswajeet45"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
-          >
-            <FaGithub size={24} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/biswajeet-sahu-318419235/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
-          >
-            <FaLinkedin size={24} />
-          </a>
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec] transition-transform transform hover:scale-110"
+            >
+              {social.icon}
+            </a>
+          ))}
         </div>
 
         {/* Mobile Menu Icon */}
@@ -115,28 +113,21 @@ const Navbar = () => {
                   activeSection === item.id ? "text-[#8245ec]" : ""
                 }`}
               >
-                <button onClick={() => handleMenuItemClick(item.id)}>
-                  {item.label}
-                </button>
+                <button onClick={() => handleMenuItemClick(item.id)}>{item.label}</button>
               </li>
             ))}
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/Biswajeet45"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaGithub size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/biswajeet-sahu-318419235/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaLinkedin size={24} />
-              </a>
+            <div className="flex space-x-4 mt-2">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-transform transform hover:scale-110"
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </ul>
         </div>
