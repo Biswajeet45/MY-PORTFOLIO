@@ -34,11 +34,11 @@ const Navbar = () => {
 
   // Social links
   const socialLinks = [
-    { icon: <FaGithub />, link: "https://github.com/Biswajeet45" },
-    { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/biswajeet-sahu-318419235/" },
-    { icon: <FaInstagram />, link: "https://www.instagram.com/_mr_biswajeet/" },
-    { icon: <SiX />, link: "https://x.com/Biswa42" },
-    { icon: <FaYoutube />, link: "https://www.youtube.com/@biswajeetsahu2963" },
+    { icon: <FaGithub size={24}/>, link: "https://github.com/Biswajeet45" },
+    { icon: <FaLinkedin size={24}/>, link: "https://www.linkedin.com/in/biswajeet-sahu-318419235/" },
+    { icon: <FaInstagram size={24}/>, link: "https://www.instagram.com/_mr_biswajeet/" },
+    { icon: <SiX size={24}/>, link: "https://x.com/Biswa42" },
+    { icon: <FaYoutube size={24}/>, link: "https://www.youtube.com/@biswajeetsahu2963" },
   ];
 
   return (
