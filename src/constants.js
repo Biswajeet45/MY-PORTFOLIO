@@ -21,6 +21,9 @@ import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
 import springBootLogo from './assets/tech_logo/spring-boot.png'
+import wordLogo from './assets/tech_logo/word.jpg'
+import excelLogo from './assets/tech_logo/excel.jpg'
+import powerPointLogo from './assets/tech_logo/PowerPoint.png'
 
 // Experience Section Logo's
 import cavissonLogo from './assets/company_logo/cavisson.png';
@@ -81,6 +84,9 @@ export const SkillsInfo = [
       { name: 'Postman', logo: postmanLogo },
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
+      { name: 'Word', logo: wordLogo },
+      { name: 'Excel', logo: excelLogo },
+      { name: 'PowerPoint', logo: powerPointLogo},
     ],
   },
 ];
